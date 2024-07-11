@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-        HOLA MUNDO 
-        </p>
-      </header>
+      <Header />
+      {/* Aquí irán los demás componentes de tu aplicación */}
+      <Footer />
     </div>
   );
 }
