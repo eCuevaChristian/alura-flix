@@ -4,18 +4,29 @@ import './DetailPage.css';
 
 const DetailPage = () => {
   const location = useLocation();
-  const { image, title, category, description } = location.state;
+  const { image, title, category, description, video } = location.state;
 
   return (
     <div className="detail-page">
-      <h1 className="detail-title">{title}</h1>
-      <h2 className="detail-category">{category}</h2>
-      <p className="detail-description">{description}</p>
+      <div className="detailconten">
+        <div className="detailLetra">
+          <h1 className="detail-title">{title}</h1>
+          <h2 className="detail-category">{category}</h2>
+          <p className="detail-description">{description}</p>
+        </div>     
       <img src={image} alt={title} className="detail-image" />
-      <video controls className="detail-video">
-        <source src="your-video-source.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      </div>
+    <div className="detail-video">
+        <iframe
+          width="800"
+          height="450"
+          src={video}
+          title={title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 };

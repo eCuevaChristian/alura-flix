@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
-import EditForm from '../EditForm/EditForm';
+import EditForm from '../EditForm/EditForm'; // Asegúrate de importar EditForm aquí
 import './Main.css';
-
 
 const initialData = [
   {
@@ -10,63 +9,71 @@ const initialData = [
     image: 'https://i.ytimg.com/vi/PztCEdIJITY/maxresdefault.jpg',
     title: '¿CUÁNDO USAR LET, VAR Y CONST?',
     category: 'FRONT END',
-    description: 'Description for ¿CUÁNDO USAR LET, VAR Y CONST?'
+    description: 'Description for ¿CUÁNDO USAR LET, VAR Y CONST?',
+    video: 'https://www.youtube.com/embed/PztCEdIJITY'
   },
   {
     id: 2,
     image: 'https://i.ytimg.com/vi_webp/UuAX5azcvDQ/maxresdefault.webp',
     title: '¿QUÉ ES JAVASCRIPT?',
     category: 'FRONT END',
-    description: 'Description for ¿QUÉ ES JAVASCRIPT?'
+    description: 'Description for ¿QUÉ ES JAVASCRIPT?',
+    video: 'https://www.youtube.com/embed/UuAX5azcvDQ'
   },
   {
     id: 3,
     image: 'https://i.ytimg.com/vi_webp/rpvrLaBQwgg/maxresdefault.webp',
     title: 'EQUIPO FRONT END',
     category: 'FRONT END',
-    description: 'Description for EQUIPO FRONT END'
+    description: 'Description for EQUIPO FRONT END',
+    video: 'https://www.youtube.com/embed/example3'
   },
   {
     id: 4,
     image: 'https://i.ytimg.com/vi_webp/t-iqt1b2qqk/maxresdefault.webp',
     title: 'SPRING FRAMEWORK',
     category: 'BACK END',
-    description: 'Description for SPRING FRAMEWORK'
+    description: 'Description for SPRING FRAMEWORK',
+    video: 'https://www.youtube.com/embed/example4'
   },
   {
     id: 5,
     image: 'https://i.ytimg.com/vi/cLLKVd5CNLc/maxresdefault.jpg',
     title: '¿QUÉ ES SQL Y NOSQL?',
     category: 'BACK END',
-    description: 'Description for ¿QUÉ ES SQL Y NOSQL?'
+    description: 'Description for ¿QUÉ ES SQL Y NOSQL?',
+    video: 'https://www.youtube.com/embed/example5'
   },
   {
     id: 6,
     image: 'https://i.ytimg.com/vi/nzVdLC_QpnA/maxresdefault.jpg',
     title: 'CONOCE LOS ENUM',
     category: 'INNOVACIÓN Y GESTIÓN',
-    description: 'Description for CONOCE LOS ENUM'
+    description: 'Description for CONOCE LOS ENUM',
+    video: 'https://www.youtube.com/embed/example6'
   },
   {
     id: 7,
     image: 'https://i.ytimg.com/vi/6N3OkLCfK-0/maxresdefault.jpg',
     title: '¿QUÉ SON LAS SOFT SKILLS?',
     category: 'INNOVACIÓN Y GESTIÓN',
-    description: 'Description for ¿QUÉ SON LAS SOFT SKILLS?'
+    description: 'Description for ¿QUÉ SON LAS SOFT SKILLS?',
+    video: 'https://www.youtube.com/embed/example7'
   },
   {
     id: 8,
     image: 'https://i.ytimg.com/vi/7lnmW8fB0nM/maxresdefault.jpg',
     title: 'LAS 7 SOFTSKILLS MÁS DESEADAS',
     category: 'INNOVACIÓN Y GESTIÓN',
-    description: 'Description for LAS 7 SOFTSKILLS MÁS DESEADAS'
+    description: 'Description for LAS 7 SOFTSKILLS MÁS DESEADAS',
+    video: 'https://www.youtube.com/embed/example8'
   }
 ];
 
 const categoryColors = {
-  'FRONT END': '#6BD1FF',
-  'BACK END': '#00C86F',
-  'INNOVACIÓN Y GESTIÓN': '#FFBA05'
+  'FRONT END': '#6BD1FF', // Azul
+  'BACK END': '#00C86F', // Verde
+  'INNOVACIÓN Y GESTIÓN': '#FFBA05' // Amarillo
 };
 
 const maxCategories = 3;
@@ -123,6 +130,7 @@ const Main = () => {
                 category={item.category}
                 categoryColor={categoryColors[item.category]}
                 description={item.description}
+                video={item.video}
                 onDelete={() => handleDelete(item.id)}
                 onEdit={() => handleEdit(item)}
               />

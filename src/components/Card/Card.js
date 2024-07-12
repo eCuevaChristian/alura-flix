@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ image, title, category, categoryColor, description, onDelete, onEdit }) => {
+const Card = ({ image, title, category, categoryColor, description, video, onDelete, onEdit }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/detail', { state: { image, title, category, description } });
+    navigate('/detail', { state: { image, title, category, description, video } });
   };
 
   const gradientBorderStyle = {

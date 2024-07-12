@@ -32,14 +32,31 @@ const EditForm = ({ card, onSave, onCancel }) => {
             <input type="text" name="image" value={editedCard.image} onChange={handleChange} />
           </label>
           <label>
+            Video de YouTube:
+            <input type="text" name="video" value={editedCard.video} onChange={handleChange} />
+          </label>
+          <label>
             Descripción:
             <textarea name="description" value={editedCard.description} onChange={handleChange} />
           </label>
           <div className="edit-form-buttons">
-            <button className="save-button" type="submit">Guardar</button>
-            <button className="save-button" type="button" onClick={onCancel}>Cancelar</button>
+            <button type="submit">Guardar</button>
+            <button type="button" onClick={onCancel}>Cancelar</button>
           </div>
         </form>
+        {editedCard.video && (
+          <div className="video-container">
+            <iframe
+              width="100%"
+              height="315"
+              src={editedCard.video}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
       </div>
     </div>
   );
