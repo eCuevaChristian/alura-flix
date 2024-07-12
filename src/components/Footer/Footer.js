@@ -7,6 +7,7 @@ return (
 <div className="logo-container">
         <img src="/img/Logo.svg" alt="ALURAFILX Logo" className="logoFooter" />
 </div>
+<span className='nombre'>Desarrollado por ©ChristianCueva </span>
     </footer>
 );
 }

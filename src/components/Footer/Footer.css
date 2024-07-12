@@ -1,5 +1,7 @@
 .footer {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     padding: 3vh;
@@ -7,14 +9,19 @@
     border-top: 2px solid #00f;
     position: static;
     bottom: 0;
-    width: 100%;
   }
   
   .logo-container {
     display: flex;
+    justify-content: center;
     align-items: center;
   }
   
   .logoFooter {
     width: 13vw; 
   } 
+
+  .nombre{
+    color: aliceblue;
+    font-size: 20px;
+  }
