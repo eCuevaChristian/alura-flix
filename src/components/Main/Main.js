@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
+import EditForm from '../EditForm/EditForm';
 import './Main.css';
+
 
 const initialData = [
   {
@@ -62,19 +64,30 @@ const initialData = [
 ];
 
 const categoryColors = {
-  'FRONT END': '#6BD1FF', // Azul
-  'BACK END': '#00C86F', // Verde
-  'INNOVACIÓN Y GESTIÓN': '#FFBA05' // Amarillo
+  'FRONT END': '#6BD1FF',
+  'BACK END': '#00C86F',
+  'INNOVACIÓN Y GESTIÓN': '#FFBA05'
 };
 
 const maxCategories = 3;
 
-const Main = ({ }) => {
+const Main = () => {
   const [data, setData] = useState(initialData);
+  const [editingCard, setEditingCard] = useState(null);
 
   const handleDelete = (id) => {
     const newData = data.filter(item => item.id !== id);
     setData(newData);
+  };
+
+  const handleEdit = (card) => {
+    setEditingCard(card);
+  };
+
+  const handleSave = (editedCard) => {
+    const newData = data.map(card => card.id === editedCard.id ? editedCard : card);
+    setData(newData);
+    setEditingCard(null);
   };
 
   const groupedData = data.reduce((acc, item) => {
@@ -111,11 +124,19 @@ const Main = ({ }) => {
                 categoryColor={categoryColors[item.category]}
                 description={item.description}
                 onDelete={() => handleDelete(item.id)}
+                onEdit={() => handleEdit(item)}
               />
             ))}
           </div>
         </div>
       ))}
+      {editingCard && (
+        <EditForm
+          card={editingCard}
+          onSave={handleSave}
+          onCancel={() => setEditingCard(null)}
+        />
+      )}
     </main>
   );
 };

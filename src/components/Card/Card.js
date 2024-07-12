@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ image, title, category, categoryColor, description, onDelete }) => {
+const Card = ({ image, title, category, categoryColor, description, onDelete, onEdit }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -24,7 +24,7 @@ const Card = ({ image, title, category, categoryColor, description, onDelete }) 
       </div>
       <div className="card-buttons">
         <button className="card-button" onClick={onDelete}>Borrar</button>
-        <button className="card-button">Editar</button>
+        <button className="card-button" onClick={onEdit}>Editar</button>
       </div>
     </div>
   );

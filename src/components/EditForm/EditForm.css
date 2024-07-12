@@ -1,0 +1,61 @@
+.edit-form-overlay {
+    color: blanchedalmond;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .edit-form {
+    background: #03122F;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 80vw;
+  }
+  
+  .edit-form h2 {
+    margin-top: 0;
+  }
+  
+  .edit-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .edit-form input,
+  .edit-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .save-button{
+    font-size: 22px;
+  background-color: #007bff00;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+
+  .save-button:hover {
+    background-color: #0056b3;
+  }
+  

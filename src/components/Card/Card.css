@@ -24,12 +24,14 @@
 }
 
 .card-category {
+  display: none;
   color: #00f;
   font-size: 14px;
   margin-bottom: 5px;
 }
 
 .card-title {
+  display: none;
   color: #fff;
   font-size: 18px;
   margin-bottom: 10px;
