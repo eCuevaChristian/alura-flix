@@ -1,0 +1,36 @@
+.detail-page {
+    padding: 30px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .detail-title {
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+  }
+  
+  .detail-category {
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+  }
+  
+  .detail-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .detail-description {
+    font-size: 1.2vw;
+    margin-bottom: 20px;
+  }
+  
+  .detail-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+  }
+  

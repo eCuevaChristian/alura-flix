@@ -30,12 +30,13 @@
 .cover-description {
   font-size: 1.2vw;
   margin-bottom: 20px;
+  max-width: 560px;
+  text-align: start;
 }
 
 .cover-image {
   max-width: 100%;
-  height: 300px;
-  width: 500px;
+  width: 40vw;
   border-radius: 10px;
 }
 

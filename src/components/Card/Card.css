@@ -1,11 +1,17 @@
 .card {
   background-color: #262626;
-  border: 2px solid; /* Ajustado para aceptar borderColor */
+  border: 2px solid;
   border-radius: 8px;
   overflow: hidden;
   width: 400px;
   margin: 1vw;
   box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .card-image {
@@ -18,14 +24,12 @@
 }
 
 .card-category {
-  display: none;
   color: #00f;
   font-size: 14px;
   margin-bottom: 5px;
 }
 
 .card-title {
-  display: none;
   color: #fff;
   font-size: 18px;
   margin-bottom: 10px;
@@ -33,20 +37,21 @@
 
 .card-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 10px;
 }
 
 .card-button {
-  background-color: rgba(0, 0, 255, 0);
-  font-size: 20px;
+  font-size: 22px;
+  background-color: #007bff00;
   color: #fff;
   border: none;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .card-button:hover {
-  background-color: #005bb5;
+  background-color: #0056b3;
 }
